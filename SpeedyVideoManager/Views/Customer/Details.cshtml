@@ -1,0 +1,26 @@
+﻿@model SpeedyVideoManager.Models.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div> 
+        <span>@Html.DisplayFor(item => item.FirstName) &nbsp;@Html.DisplayFor(item => item.LastName) </span>
+    </div>
+    <div><span>DoB:</span><span>@Html.DisplayFor(item => item.BirthDate)</span></div>
+    <div>
+        <div><span>Address:</span></div>
+        <div>@Html.DisplayFor(item => item.StreetAddress)<br />@Html.DisplayFor(item => item.City)&nbsp;@Html.DisplayFor(item => item.ZipPostal)</div>
+    </div>
+    <div>
+        <span>ID:</span><span>@Html.DisplayFor(item => item.ID)</span>
+    </div>
+</body>
+</html>

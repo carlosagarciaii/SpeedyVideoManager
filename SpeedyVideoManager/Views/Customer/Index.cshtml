@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SpeedyVideoManager.Models.Customer>
+    
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer List</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.LastName)</th>
+            <th>@Html.DisplayNameFor(m => m.FirstName)</th>
+            <th>@Html.DisplayNameFor(m => m.BirthDate)</th>
+            <th>@Html.DisplayNameFor(m => m.MembershipType.MembershipType)</th>
+            <th>@Html.DisplayNameFor(m => m.MembershipType.Discount)</th>
+            <th>&nbsp;</th>
+        </tr>
+
+        @foreach (var m in Model)
+        {
+    <tr>
+        <td>@Html.DisplayFor(item => m.LastName) </td>
+        <td>@Html.DisplayFor(item => m.FirstName) </td>
+        <td>@Html.DisplayFor(item => m.BirthDate) </td>
+        <td>@Html.DisplayFor(item => m.MembershipType.MembershipType)</td>
+        <td>@Html.DisplayFor(item => m.MembershipType.Discount) %</td>
+        <td><a href="details/@m.ID">View</a></td>
+
+    </tr>
+        }
+
+    </table>
+
+
+</body>
+</html>
